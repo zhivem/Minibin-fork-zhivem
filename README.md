@@ -1,4 +1,4 @@
-# <img src="https://raw.githubusercontent.com/zhivem/minibin-fork-zhivem/refs/heads/main/MinibinFork.ico?token=GHSAT0AAAAAAC4KREXCVMR57GSZXUMZKDMQZ3J26KA" width=4% height=4%> Minibin Fork [Zhivem] - Утилита для Очистки Корзины
+# <img src="https://raw.githubusercontent.com/zhivem/minibin-fork-zhivem/refs/heads/main/MinibinFork.ico?token=GHSAT0AAAAAAC4KREXCVMR57GSZXUMZKDMQZ3J26KA" width=4% height=4%> Minibin Fork by [Zhivem]
 
 ## Скриншоты 
 ![image](https://github.com/user-attachments/assets/ab448d4c-f027-4853-90ec-36ad7b7a67cc)
