@@ -1,4 +1,4 @@
-# <img src="https://raw.githubusercontent.com/zhivem/Minibin-fork-zhivem/refs/heads/main/MinibinFork.ico?token=GHSAT0AAAAAAC4KREXCSXSVADV4O7Y7NHUKZ3J3ZGA" width=4% height=4%> Minibin Fork by [Zhivem]
+# <img src="https://github.com/zhivem/Minibin-fork-zhivem/blob/main/MinibinFork.ico" width=4% height=4%> Minibin Fork by [Zhivem]
 
 ## Скриншоты 
 ![image](https://github.com/user-attachments/assets/ab448d4c-f027-4853-90ec-36ad7b7a67cc)
