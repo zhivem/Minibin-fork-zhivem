@@ -137,14 +137,14 @@ def initialize_autostart_menu():
     autostart_action = QAction("Автозапуск", checkable=True)
     autostart_action.setChecked(autostart.is_autostart_enabled())
     autostart_action.triggered.connect(toggle_autostart)
-    tray_menu.insertAction(empty_action, autostart_action)  # Вставляем перед разделителем
+    tray_menu.insertAction(empty_action, autostart_action)
 
 def initialize_notifications_menu():
     global show_notifications_action
     show_notifications_action = QAction("Показывать уведомления", checkable=True)
     show_notifications_action.setChecked(settings.value("show_notifications", True, type=bool))
     show_notifications_action.triggered.connect(toggle_show_notifications)
-    tray_menu.insertAction(autostart_action, show_notifications_action)  # Вставляем после автозапуска
+    tray_menu.insertAction(autostart_action, show_notifications_action)
 
 if __name__ == "__main__":
     print(f"Текущая рабочая директория: {Path.cwd()}")
