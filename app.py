@@ -36,7 +36,7 @@ def load_icon(icon_path):
         return QIcon()  # Возвращает пустой значок или можно установить значок по умолчанию
 
 # Используем QSettings для сохранения состояния уведомлений
-settings = QSettings("MyCompany", "RecycleBinManager")
+settings = QSettings("MinibinFork", "RecycleBinManager")
 
 def show_notification(title, message, icon_path=None):
     if settings.value("show_notifications", True, type=bool):
