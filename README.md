@@ -2,7 +2,7 @@
 
 ## Скриншоты 
 ![image](https://github.com/user-attachments/assets/ab448d4c-f027-4853-90ec-36ad7b7a67cc)
-![image](https://github.com/user-attachments/assets/166436af-d14d-4ae8-a98b-cb0e5fecc536)
+![image](https://github.com/user-attachments/assets/e07d14c6-cb59-484a-9075-32cb80bb571e)
 
 ## Введение
 
