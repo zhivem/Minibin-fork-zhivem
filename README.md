@@ -31,7 +31,9 @@
 3. Запустите.
 
 ## Автор утилиты
-Автор оригинальной утилиты: [King Triton](https://github.com/king-tri-ton). Форк утилиты с дополнительными функциями: [Zhivem](https://github.com/zhivem/minibin-fork-zhivem)
+
+- Автор оригинальной утилиты: [King Triton](https://github.com/king-tri-ton)<br/>
+- Ссылка на оригинальный репозиторий утилиты: [Minibin](https://github.com/king-tri-ton/minibin)
 
 ## Лицензия
 
