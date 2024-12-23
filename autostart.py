@@ -12,7 +12,7 @@ def get_startup_folder():
 def get_executable_path():
     """
     Возвращает путь к исполняемому файлу приложения.
-    Если приложение собрано с помощью PyInstaller, используется sys._MEIPASS.
+    Нужно для PyInstaller, используется sys._MEIPASS. Чтоб все в один .exe запаковать. 
     """
     if getattr(sys, 'frozen', False):
         return sys.executable
