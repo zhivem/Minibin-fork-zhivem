@@ -36,9 +36,7 @@ def load_icon(icon_path):
         return QIcon()  # Возвращает пустой значок или можно установить значок по умолчанию
 
 # Используем QSettings для сохранения состояния настроек. MinibinFork пусть лучше так и останется. Перед изменением, удалите старое значение из реестра. 
-# Настройки сохраняются в реестре по пути.. Компьютер\HKEY_USERS\S-1-5-21-2654149654-4223463238-2020034552-1001\Software\MinibinFork\RecycleBinManager
-
-settings = QSettings("MinibinFork", "RecycleBinManager")
+# Настройки сохраняются в реестре по пути.. Компьютер\HKEY_USERS\S-1-5-21-2654149654-4223463238-2020034552-1001\Software\MinibinFork\RecycleBinManagersettings = QSettings("MinibinFork", "RecycleBinManager")
 
 def show_notification(title, message, icon_path=None):
     if settings.value("show_notifications", True, type=bool):
@@ -98,7 +96,8 @@ def periodic_update():
 
 def verify_icons():
     icons = ["icons/minibin-kt-empty.ico", "icons/minibin-kt-full.ico",
-             "icons/autostart-enabled.ico", "icons/autostart-disabled.ico",]  
+             "icons/autostart-enabled.ico", "icons/autostart-disabled.ico",
+             "icons/notifications-enabled.ico"]
     for icon in icons:
         icon_full_path = resource_path(icon)
         if not Path(icon_full_path).exists():
@@ -137,14 +136,22 @@ def initialize_autostart_menu():
     autostart_action = QAction("Автозапуск", checkable=True)
     autostart_action.setChecked(autostart.is_autostart_enabled())
     autostart_action.triggered.connect(toggle_autostart)
-    tray_menu.insertAction(empty_action, autostart_action)
+    tray_menu.insertAction(empty_action, autostart_action) 
 
 def initialize_notifications_menu():
     global show_notifications_action
     show_notifications_action = QAction("Показывать уведомления", checkable=True)
     show_notifications_action.setChecked(settings.value("show_notifications", True, type=bool))
     show_notifications_action.triggered.connect(toggle_show_notifications)
-    tray_menu.insertAction(autostart_action, show_notifications_action)
+    tray_menu.insertAction(autostart_action, show_notifications_action) 
+
+def on_tray_icon_activated(reason):
+    """
+    Обработчик активации иконки трея.
+    Проверяет, был ли это двойной клик, и открывает корзину.
+    """
+    if reason == QSystemTrayIcon.ActivationReason.DoubleClick:
+        open_recycle_bin()
 
 if __name__ == "__main__":
     print(f"Текущая рабочая директория: {Path.cwd()}")
@@ -184,6 +191,9 @@ if __name__ == "__main__":
     tray_icon.setContextMenu(tray_menu)
     tray_icon.setToolTip("Менеджер Корзины")
     tray_icon.show()
+
+    # Подключаем обработчик активации иконки
+    tray_icon.activated.connect(on_tray_icon_activated)
 
     timer = QTimer()
     timer.timeout.connect(periodic_update)
