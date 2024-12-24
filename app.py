@@ -36,7 +36,9 @@ def load_icon(icon_path):
         return QIcon()  # Возвращает пустой значок или можно установить значок по умолчанию
 
 # Используем QSettings для сохранения состояния настроек. MinibinFork пусть лучше так и останется. Перед изменением, удалите старое значение из реестра. 
-# Настройки сохраняются в реестре по пути.. Компьютер\HKEY_USERS\S-1-5-21-2654149654-4223463238-2020034552-1001\Software\MinibinFork\RecycleBinManagersettings = QSettings("MinibinFork", "RecycleBinManager")
+# Настройки сохраняются в реестре по пути.. Компьютер\HKEY_USERS\S-1-5-21-2654149654-4223463238-2020034552-1001\Software\MinibinFork\RecycleBinManager
+
+settings = QSettings("MinibinFork", "RecycleBinManager")
 
 def show_notification(title, message, icon_path=None):
     if settings.value("show_notifications", True, type=bool):
