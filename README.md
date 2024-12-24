@@ -4,6 +4,9 @@
 ![image](https://github.com/user-attachments/assets/ab448d4c-f027-4853-90ec-36ad7b7a67cc)
 ![image](https://github.com/user-attachments/assets/e07d14c6-cb59-484a-9075-32cb80bb571e)
 
+> [!NOTE]
+> Утилиту Minibin написанную на языке `C#` можно посмотреть тут: [Minibin Fork by [Zhivem] на C#](https://github.com/zhivem/MinibinForkC)
+
 ## Введение
 
 Этот репозиторий является форком [Minibin](https://github.com/king-tri-ton/minibin) — небольшой утилиты для очистки корзины в операционной системе Windows. В этом форке добавлены новые функции, которые расширяют возможности программы и улучшают пользовательский опыт
